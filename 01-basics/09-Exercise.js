@@ -5,6 +5,11 @@ var favoriteBooks = [];
 //   if (!constainsGreat) favoriteBooks.push(book);
 // };
 
+const printFavoritBooks = () => {
+  console.log(`Favorites Books: ${favoriteBooks.length}`);
+  favoriteBooks.forEach((book) => console.log(book));
+};
+
 const addFavoriteBook = (book) => {
   !book.toLowerCase().includes("great") && favoriteBooks.push(book);
 };
@@ -15,4 +20,4 @@ addFavoriteBook("Crime & Punishment");
 addFavoriteBook("Great Expectations");
 addFavoriteBook("You Dont't Know JS");
 
-console.log(favoriteBooks);
+printFavoritBooks();
